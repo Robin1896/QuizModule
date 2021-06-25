@@ -1,0 +1,52 @@
+[
+	{
+		"question": "Wat doe ik naast mijn werk als hobby?",
+		"answersAll": [
+			"Badmintonnen",
+			"Voetballen",
+			"Hockey"
+		],
+		"correctAnswer": "Voetballen",
+		"questionNumber": 1
+	},
+	{
+		"question": "Waar kijk in het liefst naar?",
+		"answersAll": [
+			"Zondag met Lubach",
+			"NBA",
+			"Space X lancering"
+		],
+		"correctAnswer": "Space X lancering",
+		"questionNumber": 2
+	},
+	{
+		"question": "Waar kun je mij het snelst tegenkomen?",
+		"answersAll": [
+			"De bibliotheek",
+			"De kroeg",
+			"Het park"
+		],
+		"correctAnswer": "De kroeg",
+		"questionNumber": 3
+	},
+	{
+		"question": "Bij welke eredivisie club sta ik te juichen?",
+		"answersAll": [
+			"PSV",
+			"RKC",
+			"Willem II"
+		],
+		"correctAnswer": "Willem II",
+		"questionNumber": 4
+	},
+	{
+		"question": "Welk vrijwillgerswerk doe ik?",
+		"answersAll": [
+			"KVW & Trainer bij het voetbal",
+			"KVW & Trainer bij de duikvereniging",
+			"KVW"
+		],
+		"correctAnswer": "KVW & Trainer bij de duikvereniging",
+		"questionNumber": 5
+	}
+]

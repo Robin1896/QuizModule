@@ -1,0 +1,188 @@
+@import "../../styles/setup/main.scss";
+@import "../../styles/globals/globals.scss";
+@import "../../styles/globals/colors.scss";
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.quiz {
+	background: transparent linear-gradient(180deg, #4a95f1 0%, #5c37db 100%) 0% 0% no-repeat padding-box;
+	height: 100vh;
+	&__title {
+		position: absolute;
+		padding: $unit-xl;
+	}
+	&__nameForm {
+		display: flex;
+		justify-content: center;
+		height: 100vh;
+		&__align {
+			align-self: center;
+			text-align: center;
+			&__input {
+				border-radius: $unit-xxl;
+				height: $unit-xl-h;
+				width: 100%;
+				margin-bottom: $unit-l;
+				margin-top: $unit-l;
+				background-color: $clr-misc-transparant;
+				border: 2px solid $clr-misc-white;
+				font-size: $fs-input;
+				font-weight: $fw-bold;
+				text-align: center;
+				padding: $unit-l-h;
+				font-family: $ff-base;
+				color: $clr-misc-white;
+			}
+			&__input::placeholder {
+				color: $clr-misc-white;
+				opacity: 0.4;
+				font-weight: $fw-base;
+			}
+			button {
+				width: 100%;
+				height: $unit-xl-h;
+				border-radius: $unit-xxl;
+				border: none;
+				color: $clr-misc-button;
+			}
+		}
+	}
+	&__question {
+		display: flex;
+		justify-content: center;
+		height: 100vh;
+		&__align {
+			align-self: center;
+			padding: $unit-l-h;
+			width: $unit-question;
+			&__counter {
+				padding-bottom: $unit-l;
+				font-size: $fs-h3;
+			}
+			&__button {
+				display: flex;
+				background-color: $clr-misc-transparant;
+				border: 4px solid $clr-misc-white;
+				color: $clr-misc-white;
+				font-size: $fs-input;
+				font-weight: $fw-bold;
+				padding: $unit-l;
+				margin-top: $unit-xl;
+				margin-right: auto;
+				margin-left: auto;
+				border-radius: $unit-xxl;
+				width: 75%;
+				&__answer {
+					width: 100%;
+					font-family: $ff-base;
+				}
+
+				&__icon {
+					display: block;
+					position: absolute;
+					svg {
+						font-size: $fs-icon;
+						margin-top: -2px;
+					}
+				}
+			}
+			&__button:hover {
+				background-color: $clr-misc-button-hover;
+				transition: 0.3s;
+			}
+		}
+	}
+	&__personName {
+		padding-left: $unit-xl;
+		padding-top: $unit-xl;
+		position: absolute;
+		font-size: $fs-input;
+	}
+	&__overview {
+		display: flex;
+		justify-content: center;
+		height: 100vh;
+		&__align {
+			align-self: center;
+			text-align: center;
+			&__scores {
+				&__data {
+					padding-bottom: $unit-xl;
+					&__answer {
+						display: inline-flex;
+						background-color: $clr-misc-transparant;
+						border: 2px solid $clr-misc-white;
+						text-align: center;
+						border-radius: $unit-xxl;
+						width: 60%;
+						align-items: center;
+						margin-top: $unit-l;
+						h3 {
+							width: 80%;
+							justify-content: center;
+						}
+						&__icon {
+							padding-top: $unit-s-h;
+							padding-left: $unit-m-h;
+							svg {
+								font-size: $fs-icon;
+							}
+						}
+					}
+				}
+				&__question {
+					font-size: $fs-h2;
+				}
+			}
+			&__button {
+				width: 100%;
+				padding: $unit-l;
+				border-radius: $unit-xxl;
+				border: none;
+				color: $clr-misc-button;
+			}
+		}
+	}
+	&__leaderboard {
+		h1 {
+			text-align: center;
+		}
+		padding-right: $unit-xxxxl;
+		padding-left: $unit-xxxxl;
+		padding-top: $unit-xxxl;
+		&__align {
+			margin-top: $unit-l;
+			justify-content: center;
+			display: flex;
+			flex-wrap: wrap;
+			&__data {
+				align-items: center;
+				justify-content: space-between;
+				display: flex;
+				background-color: $clr-misc-transparant;
+				border: 3px solid $clr-misc-white;
+				border-radius: $unit-xxl;
+				width: $unit-xxxxl;
+				margin: $unit-m-h;
+				padding-left: $unit-xl;
+				padding-right: $unit-xl;
+				padding-top: $unit-s;
+				padding-bottom: $unit-s;
+				p {
+					font-size: $fs-input;
+				}
+				&__number {
+					font-weight: $fw-bold;
+					padding-right: $unit-m-h;
+					font-size: $fs-icon;
+				}
+				h3 {
+					display: flex;
+				}
+			}
+		}
+	}
+}
