@@ -16,6 +16,7 @@ class QuizLeaderboard extends React.Component {
 		fire
 			.database()
 			.ref("scores")
+			.limitToLast(10)
 			.on("value", (snapshot) => {
 				snapshot.forEach((snap) => {
 					scores.push(snap.val());

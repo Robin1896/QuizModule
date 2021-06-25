@@ -55,7 +55,7 @@ class QuizQuestion extends React.Component {
 					},
 				});
 			}.bind(this),
-			50
+			2000
 		);
 	}
 

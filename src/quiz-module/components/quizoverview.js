@@ -7,10 +7,10 @@ class QuizOverview extends React.Component {
 		const { quizDetails } = this.props;
 		const renderQuestion = quizDetails.quizQuestion?.map((quizQuestion) => (
 			<div className='quiz__overview__align__scores__data'>
-				<h1>{quizQuestion.question}</h1>
+				<h3>{quizQuestion.question}</h3>
 				<div className='quiz__overview__align__scores__data__answer'>
 					<div className='quiz__overview__align__scores__data__answer__icon'>{quizQuestion.correct ? <DoneIcon></DoneIcon> : <CloseIcon></CloseIcon>}</div>
-					<h3>{quizQuestion.answer}</h3>
+					<h4>{quizQuestion.answer}</h4>
 				</div>
 			</div>
 		));
@@ -26,7 +26,7 @@ class QuizOverview extends React.Component {
 					<div className='quiz__overview__align'>
 						<div className='quiz__overview__align__scores'>{this.renderOverwiew()}</div>
 						<button onClick={() => handleProcess()} className='quiz__overview__align__button'>
-							<h2>Naar leaderboard</h2>
+							<h3>Naar leaderboard</h3>
 						</button>
 					</div>
 				</div>

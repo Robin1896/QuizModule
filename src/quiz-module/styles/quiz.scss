@@ -8,7 +8,6 @@
 }
 
 .quiz {
-	background: transparent linear-gradient(180deg, #4a95f1 0%, #5c37db 100%) 0% 0% no-repeat padding-box;
 	height: 100vh;
 	&__title {
 		position: absolute;
@@ -110,18 +109,19 @@
 			text-align: center;
 			&__scores {
 				&__data {
-					padding-bottom: $unit-xl;
+					padding-bottom: $unit-l;
 					&__answer {
+						height: $unit-xl-h;
 						display: inline-flex;
 						background-color: $clr-misc-transparant;
 						border: 2px solid $clr-misc-white;
 						text-align: center;
 						border-radius: $unit-xxl;
-						width: 60%;
+						width: 100%;
 						align-items: center;
 						margin-top: $unit-l;
-						h3 {
-							width: 80%;
+						h4 {
+							width: 75%;
 							justify-content: center;
 						}
 						&__icon {
@@ -143,6 +143,7 @@
 				border-radius: $unit-xxl;
 				border: none;
 				color: $clr-misc-button;
+				height: $unit-xl-h;
 			}
 		}
 	}
@@ -150,9 +151,9 @@
 		h1 {
 			text-align: center;
 		}
-		padding-right: $unit-xxxxl;
-		padding-left: $unit-xxxxl;
-		padding-top: $unit-xxxl;
+		padding-right: $unit-xxl;
+		padding-left: $unit-xxl;
+		padding-top: $unit-xxl;
 		&__align {
 			margin-top: $unit-l;
 			justify-content: center;
