@@ -54,8 +54,8 @@ class QuizQuestion extends React.Component {
 						incorrectColor: { backgroundColor: "" },
 					},
 				});
-			}.bind(this)
-			// 2000
+			}.bind(this),
+			1000
 		);
 	}
 
