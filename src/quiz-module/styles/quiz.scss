@@ -20,6 +20,7 @@
 		&__align {
 			align-self: center;
 			text-align: center;
+			padding: $unit-l-h;
 			&__input {
 				border-radius: $unit-xxl;
 				height: $unit-xl-h;
@@ -166,12 +167,15 @@
 				background-color: $clr-misc-transparant;
 				border: 3px solid $clr-misc-white;
 				border-radius: $unit-xxl;
-				width: $unit-xxxxl;
-				margin: $unit-m-h;
+				margin-top: $unit;
 				padding-left: $unit-xl;
 				padding-right: $unit-xl;
-				padding-top: $unit-s;
-				padding-bottom: $unit-s;
+				padding-top: $unit-xs;
+				padding-bottom: $unit-xs;
+				margin-left: 40%;
+				margin-right: 40%;
+				width: 50%;
+
 				p {
 					font-size: $fs-input;
 				}
