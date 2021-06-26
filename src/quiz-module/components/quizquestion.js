@@ -12,7 +12,7 @@ class QuizQuestion extends React.Component {
 				incorrectColor: { backgroundColor: "" },
 			},
 
-			icon: true,
+			icon: false,
 		};
 		this.handleQuestion = this.handleQuestion.bind(this);
 	}

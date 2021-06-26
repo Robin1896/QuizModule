@@ -39,6 +39,7 @@ class QuizModule extends React.Component {
 		this.setState({
 			process: "questions",
 		});
+		window.scrollTo(0, 0);
 	}
 
 	saveQuizDetails(quizQuestion) {

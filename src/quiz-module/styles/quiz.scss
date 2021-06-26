@@ -86,7 +86,7 @@
 					position: absolute;
 					svg {
 						font-size: $fs-icon;
-						margin-top: -2px;
+						margin-top: -$unit-s;
 					}
 				}
 			}
@@ -113,7 +113,6 @@
 			align-self: center;
 			text-align: center;
 			&__scores {
-				text-align: left;
 				&__data {
 					padding-bottom: $unit-l;
 					&__answer {
@@ -134,7 +133,7 @@
 							padding-top: $unit-s-h;
 							padding-left: $unit-m-h;
 							svg {
-								font-size: $fs-icon;
+								font-size: $fs-input;
 							}
 						}
 					}
@@ -179,8 +178,8 @@
 				padding-right: $unit-xl;
 				padding-top: $unit-xs;
 				padding-bottom: $unit-xs;
-				margin-left: 40%;
-				margin-right: 40%;
+				margin-left: 30%;
+				margin-right: 30%;
 				width: 50%;
 
 				p {
@@ -201,12 +200,9 @@
 
 @media only screen and (max-width: 600px) {
 	.quiz {
-		&__nameForm {
-			&__align {
-			}
-		}
 		&__question {
 			&__align {
+				margin-top: -20%;
 				h1 {
 					padding-bottom: $unit-l-h;
 				}
@@ -229,12 +225,23 @@
 			&__align {
 				&__scores {
 					text-align: center;
+					&__data {
+						&__answer {
+							h4 {
+								width: 100%;
+							}
+							&__icon {
+								display: none;
+								svg {
+									font-size: 1.5rem;
+								}
+							}
+						}
+					}
 				}
 				align-self: unset;
 				margin-top: $unit-xxl;
-				svg {
-					font-size: 1.5rem;
-				}
+
 				&__button {
 					margin-bottom: $unit-xl;
 				}
@@ -249,8 +256,7 @@
 			padding-top: $unit-xxl;
 			&__align {
 				&__data {
-					padding-left: $unit;
-					padding-right: $unit;
+					padding: $unit;
 					margin-left: 0;
 					margin-right: 0;
 					width: 100%;

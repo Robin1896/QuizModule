@@ -41,7 +41,7 @@ class QuizLeaderboard extends React.Component {
 							.sort((a, b) => b.score - a.score)
 							.map((a) => {
 								return (
-									<div className='quiz__leaderboard__align__data' style={{ border: a.name === quizDetails.name ? "4px solid #5849df" : null }}>
+									<div className='quiz__leaderboard__align__data' style={{ border: a.name === quizDetails.name && a.score === quizDetails.score ? "4px solid #5849df" : null }}>
 										<p className='quiz__leaderboard__align__data__number'>{i++}</p>
 										<p>{a.name}</p>
 										<div className='quiz__leaderboard__align__data__score'>Score: {a.score}</div>

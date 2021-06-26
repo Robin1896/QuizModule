@@ -8,7 +8,7 @@ class QuizOverview extends React.Component {
 		const renderQuestion = quizDetails.quizQuestion?.map((quizQuestion) => (
 			<div className='quiz__overview__align__scores__data'>
 				<h3>{quizQuestion.question}</h3>
-				<div className='quiz__overview__align__scores__data__answer'>
+				<div className='quiz__overview__align__scores__data__answer' style={quizQuestion.correct ? { backgroundColor: "green" } : { backgroundColor: "red" }}>
 					<div className='quiz__overview__align__scores__data__answer__icon'>{quizQuestion.correct ? <DoneIcon></DoneIcon> : <CloseIcon></CloseIcon>}</div>
 					<h4>{quizQuestion.answer}</h4>
 				</div>
