@@ -47,6 +47,7 @@
 				border-radius: $unit-xxl;
 				border: none;
 				color: $clr-misc-button;
+				background-color: $clr-misc-white;
 			}
 		}
 	}
@@ -150,6 +151,7 @@
 				color: $clr-misc-button;
 				height: $unit-xl-h;
 				margin-top: $unit-l;
+				background-color: $clr-misc-white;
 			}
 		}
 	}
@@ -198,13 +200,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-	html,
-	body {
-		overflow-x: hidden;
-	}
-	body {
-		position: relative;
-	}
 	.quiz {
 		&__nameForm {
 			&__align {
