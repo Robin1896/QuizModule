@@ -31,7 +31,9 @@ class QuizLeaderboard extends React.Component {
 		const { scores } = this.state;
 		return (
 			<div>
-				<div className='quiz__personName'>👋 Hi, {quizDetails.name}</div>
+				<div className='quiz__personName'>
+					<h2>👋 Hi, {quizDetails.name}</h2>
+				</div>
 				<div className='quiz__leaderboard'>
 					<h1>Leaderboard</h1>
 					<div className='quiz__leaderboard__align'>

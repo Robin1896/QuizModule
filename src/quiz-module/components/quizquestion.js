@@ -12,7 +12,7 @@ class QuizQuestion extends React.Component {
 				incorrectColor: { backgroundColor: "" },
 			},
 
-			icon: false,
+			icon: true,
 		};
 		this.handleQuestion = this.handleQuestion.bind(this);
 	}
@@ -79,7 +79,9 @@ class QuizQuestion extends React.Component {
 							return (
 								<div>
 									<button className='quiz__question__align__button' style={data === questionData.correctAnswer ? color.correctColor : color.incorrectColor} key={data} onClick={() => this.handleQuestion(data, questionData.correctAnswer, questionData.question)}>
-										<div className='quiz__question__align__button__answer'>{data}</div>
+										<div className='quiz__question__align__button__answer'>
+											<h2>{data}</h2>
+										</div>
 										<div className='quiz__question__align__button__icon'>{icon && <div>{data === questionData.correctAnswer ? <DoneIcon></DoneIcon> : <CloseIcon></CloseIcon>}</div>}</div>
 									</button>
 								</div>
@@ -97,7 +99,9 @@ class QuizQuestion extends React.Component {
 		const { quizDetails } = this.props;
 		return (
 			<div>
-				<div className='quiz__personName'>👋 Hi, {quizDetails.name}</div>
+				<div className='quiz__personName'>
+					<h2>👋 Hi, {quizDetails.name}</h2>
+				</div>
 				{this.renderQuestion()}
 			</div>
 		);

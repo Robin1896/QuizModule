@@ -21,9 +21,12 @@ class QuizOverview extends React.Component {
 		const { handleProcess, quizDetails } = this.props;
 		return (
 			<div>
-				<div className='quiz__personName'>👋 Hi, {quizDetails.name}</div>
+				<div className='quiz__personName'>
+					<h2>👋 Hi, {quizDetails.name}</h2>
+				</div>
 				<div className='quiz__overview'>
 					<div className='quiz__overview__align'>
+						<h1>Score overview</h1>
 						<div className='quiz__overview__align__scores'>{this.renderOverwiew()}</div>
 						<button onClick={() => handleProcess()} className='quiz__overview__align__button'>
 							<h3>Naar leaderboard</h3>

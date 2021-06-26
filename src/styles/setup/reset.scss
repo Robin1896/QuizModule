@@ -45,3 +45,15 @@ h6 {
 	margin: 0;
 	text-transform: uppercase;
 }
+
+@media only screen and (max-width: 600px) {
+	h1 {
+		font-size: $fs-default;
+	}
+	h2 {
+		font-size: $fs-default;
+	}
+	h3 {
+		font-size: $fs-default;
+	}
+}

@@ -106,9 +106,13 @@
 		justify-content: center;
 		height: 100vh;
 		&__align {
+			h1 {
+				padding-bottom: $unit-xl;
+			}
 			align-self: center;
 			text-align: center;
 			&__scores {
+				text-align: left;
 				&__data {
 					padding-bottom: $unit-l;
 					&__answer {
@@ -120,7 +124,7 @@
 						border-radius: $unit-xxl;
 						width: 100%;
 						align-items: center;
-						margin-top: $unit-l;
+						margin-top: $unit-s;
 						h4 {
 							width: 75%;
 							justify-content: center;
@@ -145,6 +149,7 @@
 				border: none;
 				color: $clr-misc-button;
 				height: $unit-xl-h;
+				margin-top: $unit-l;
 			}
 		}
 	}
@@ -186,6 +191,80 @@
 				}
 				h3 {
 					display: flex;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	html,
+	body {
+		overflow-x: hidden;
+	}
+	body {
+		position: relative;
+	}
+	.quiz {
+		&__nameForm {
+			&__align {
+			}
+		}
+		&__question {
+			&__align {
+				h1 {
+					padding-bottom: $unit-l-h;
+				}
+				&__button {
+					margin: 0;
+					width: 100%;
+					margin-top: $unit-m-h;
+					padding: $unit;
+					&__icon {
+						display: none;
+					}
+				}
+			}
+		}
+		&__overview {
+			h1 {
+				font-size: 1.5rem;
+			}
+			padding: $unit-l-h;
+			&__align {
+				&__scores {
+					text-align: center;
+				}
+				align-self: unset;
+				margin-top: $unit-xxl;
+				svg {
+					font-size: 1.5rem;
+				}
+				&__button {
+					margin-bottom: $unit-xl;
+				}
+			}
+		}
+		&__leaderboard {
+			h1 {
+				font-size: 1.5rem;
+				padding-top: $unit-xl;
+			}
+			padding: $unit-l-h;
+			padding-top: $unit-xxl;
+			&__align {
+				&__data {
+					padding-left: $unit;
+					padding-right: $unit;
+					margin-left: 0;
+					margin-right: 0;
+					width: 100%;
+					p {
+						font-size: $fs-h3;
+					}
+					&__score {
+						font-size: $fs-h5;
+					}
 				}
 			}
 		}
