@@ -51,7 +51,7 @@ class QuizLeaderboard extends React.Component {
 										<p>{quizdata.name}</p>
 
 										<div className='quiz__leaderboard__align__data__score'>
-											Score: {quizdata.score}/ Totale tijd: {((quizdata.totalTime % 60000) / 1000).toFixed(1)} Seconden
+											Score: {quizdata.score} / Totale tijd: {((quizdata.totalTime % 60000) / 1000).toFixed(1)} Seconden
 										</div>
 									</div>
 								);
