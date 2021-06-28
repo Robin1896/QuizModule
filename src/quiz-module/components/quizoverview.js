@@ -3,6 +3,10 @@ import DoneIcon from "@material-ui/icons/Done";
 import CloseIcon from "@material-ui/icons/Close";
 
 class QuizOverview extends React.Component {
+	/**
+	 * Render overview of questions that are filled in, if correct then show icon and color
+	 * @param {object} quizDetails array with all data of persons who did the quiz
+	 */
 	renderOverwiew() {
 		const { quizDetails } = this.props;
 		const renderQuestion = quizDetails.quizQuestion?.map((quizQuestion) => (

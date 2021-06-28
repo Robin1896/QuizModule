@@ -11,12 +11,17 @@ class QuizLeaderboard extends React.Component {
 		this.getLeaderboard();
 	}
 
+	/**
+	 * Gets data from database and set state of scores
+	 * @param {array} scores array with all data of persons who did the quiz
+	 */
 	getLeaderboard() {
 		let scores = [];
 		fire
 			.database()
 			.ref("scores")
 			.limitToLast(10)
+			.orderByChild("totalTime")
 			.on("value", (snapshot) => {
 				snapshot.forEach((snap) => {
 					scores.push(snap.val());
@@ -38,13 +43,16 @@ class QuizLeaderboard extends React.Component {
 					<h1>Leaderboard</h1>
 					<div className='quiz__leaderboard__align'>
 						{scores
-							.sort((a, b) => b.score - a.score)
-							.map((a) => {
+							.sort((scoreA, scoreB) => scoreB.score - scoreA.score)
+							.map((quizdata) => {
 								return (
-									<div className='quiz__leaderboard__align__data' style={{ border: a.name === quizDetails.name && a.score === quizDetails.score ? "4px solid #5849df" : null }}>
+									<div className='quiz__leaderboard__align__data' style={{ border: quizdata.name === quizDetails.name && quizdata.score === quizDetails.score && quizdata.totalTime === quizDetails.totalTime ? "4px solid #5849df" : null }}>
 										<p className='quiz__leaderboard__align__data__number'>{i++}</p>
-										<p>{a.name}</p>
-										<div className='quiz__leaderboard__align__data__score'>Score: {a.score}</div>
+										<p>{quizdata.name}</p>
+
+										<div className='quiz__leaderboard__align__data__score'>
+											Score: {quizdata.score}/ Totale tijd: {((quizdata.totalTime % 60000) / 1000).toFixed(1)} Seconden
+										</div>
 									</div>
 								);
 							})}
